@@ -6,3 +6,6 @@
 ### Licence
 Copyright &copy; 2023 IJSE DEP-11. All Rights Reserved. <br>
 This project is licensed under the [MIT License](Licence.txt)
+
+### SRS
+Software Requirements Specification
