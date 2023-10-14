@@ -1,14 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="lk.ijse.dep11.EAS.controller.LoginFormController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="383.0" prefWidth="600.0" style="-fx-background-color: while;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep11.EAS.controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="74.0" fitWidth="242.0" layoutX="37.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/images/ijse-logo.gif" />
+         </image>
+      </ImageView>
+      <Separator layoutX="297.0" layoutY="24.0" orientation="VERTICAL" prefHeight="336.0" prefWidth="0.0" />
+      <Label layoutX="28.0" layoutY="91.0" text="HOME OF SOFTWARE ENGINEERING">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="111.0" layoutY="125.0" text="Welcome" textFill="#0a39f7">
+         <font>
+            <Font name="DejaVu Sans Mono Bold" size="22.0" />
+         </font></Label>
+      <VBox layoutX="329.0" layoutY="83.0" spacing="10.0">
+         <children>
+            <Label text="ID" />
+            <TextField prefHeight="24.0" prefWidth="226.0" promptText="Your ID" style="-fx-background-radius: 10;">
+               <font>
+                  <Font size="12.0" />
+               </font></TextField>
+            <Label text="PASSWORD" />
+            <PasswordField prefHeight="24.0" prefWidth="226.0" promptText="Password" style="-fx-background-radius: 10;">
+               <font>
+                  <Font size="12.0" />
+               </font></PasswordField>
+         </children>
+      </VBox>
+      <JFXButton buttonType="RAISED" layoutX="412.0" layoutY="235.0" prefHeight="33.0" prefWidth="71.0" style="-fx-background-color: blue; -fx-background-radius: 10;" text="LOGIN" textFill="WHITE" />
+      <Label layoutX="406.0" layoutY="29.0" text="LOGIN">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Hyperlink layoutX="455.0" layoutY="202.0" prefHeight="20.0" prefWidth="100.0" text="Forgot Password">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Hyperlink>
+      <ImageView fitHeight="165.0" fitWidth="260.0" layoutX="34.0" layoutY="186.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/images/login-2.jpg" />
+         </image></ImageView>
+      <Label layoutX="67.0" layoutY="158.0" text="Employee Attenadnce System">
+         <font>
+            <Font size="12.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="49.0" layoutY="362.0" text="Copyright 2023 DEP. All Rights Reserved." AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>
