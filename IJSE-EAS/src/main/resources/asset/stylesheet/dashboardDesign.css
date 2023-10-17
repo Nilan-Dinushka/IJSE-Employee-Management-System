@@ -1,0 +1,23 @@
+
+#navForm{
+    -fx-background-color: linear-gradient(to bottom right, #b20c0c, #ef2828);
+}
+
+
+#btnDelete{
+    -fx-background-color: #ef2828;
+}
+
+.nav-button{
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-font-family: "Ubuntu";
+    -fx-font-size: 18px;
+    -fx-text-fill: #fff;
+}
+
+
+.white-bg{
+    -fx-background-color: #fff;
+    -fx-background-radius: 8px;
+}

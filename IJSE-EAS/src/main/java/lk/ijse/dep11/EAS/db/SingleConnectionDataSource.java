@@ -26,8 +26,6 @@ public class SingleConnectionDataSource {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-
-
     }
 
     private void generateSchema() throws Exception {
