@@ -60,7 +60,7 @@
          </image></ImageView>
       <Label layoutX="67.0" layoutY="158.0" text="Employee Attenadnce System">
          <font>
-            <Font size="12.0" />
+            <Font name="System Bold" size="12.0" />
          </font></Label>
       <Label alignment="CENTER" layoutX="49.0" layoutY="362.0" text="Copyright 2023 DEP. All Rights Reserved." AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
          <font>

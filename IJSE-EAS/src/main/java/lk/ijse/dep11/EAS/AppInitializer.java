@@ -17,7 +17,7 @@ public class AppInitializer extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        StackPane root = FXMLLoader.load(getClass().getResource("/view/AdminPanel.fxml"));
+        AnchorPane root = FXMLLoader.load(getClass().getResource("/view/LoginForm.fxml"));
         Scene mainScene = new Scene(root);
         primaryStage.setScene(mainScene);
         primaryStage.setTitle("IJSE EAS LOGIN");

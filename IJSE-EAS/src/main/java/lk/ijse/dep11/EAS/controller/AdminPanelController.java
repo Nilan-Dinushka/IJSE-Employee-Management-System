@@ -22,6 +22,19 @@ public class AdminPanelController {
     public Button btnLogout;
     public AnchorPane root;
     public Button btnHome;
+    public AnchorPane rootHome;
+    public AnchorPane rootDashboard;
+    public AnchorPane rootManageEmployees;
+    public AnchorPane rootTerminationRequests;
+    public AnchorPane rootAttendanceReport;
+    public AnchorPane rootManageBranches;
+    public AnchorPane rootEmployeeStatus;
+    public AnchorPane rootResetEmployee;
+
+    public void initialize(){
+        btnHome.fire();
+    }
+
 
     public void btnDashboardOnAction(ActionEvent actionEvent) throws IOException {
         btnDashboard.setStyle("-fx-background-color: linear-gradient(to bottom right,#ef2828,#ffffff)");
@@ -32,6 +45,12 @@ public class AdminPanelController {
         }
         AnchorPane load = FXMLLoader.load(getClass().getResource("/view/LoginForm.fxml"));
         root.getChildren().add(0,load);
+
+        rootDashboard.setVisible(true);
+        AnchorPane[] anchorPanes = {rootHome,rootResetEmployee,rootManageBranches,rootManageEmployees,rootEmployeeStatus,rootAttendanceReport,rootTerminationRequests};
+        for (AnchorPane anchorPane : anchorPanes) {
+            anchorPane.setVisible(false);
+        }
     }
 
     public void btnManageEmployeesOnAction(ActionEvent actionEvent) {
@@ -39,6 +58,11 @@ public class AdminPanelController {
         Button[] buttons = {btnHome,btnManageBranches,btnEmploymentStatus,btnDashboard,btnAttendanceReport,btnResetEmployees,btnTerminationRequests};
         for (Button button : buttons) {
             button.setStyle("-fx-background-color: transparent");
+        }
+        rootManageEmployees.setVisible(true);
+        AnchorPane[] anchorPanes = {rootDashboard,rootResetEmployee,rootManageBranches,rootHome,rootEmployeeStatus,rootAttendanceReport,rootTerminationRequests};
+        for (AnchorPane anchorPane : anchorPanes) {
+            anchorPane.setVisible(false);
         }
     }
 
@@ -48,6 +72,11 @@ public class AdminPanelController {
         for (Button button : buttons) {
             button.setStyle("-fx-background-color: transparent");
         }
+        rootTerminationRequests.setVisible(true);
+        AnchorPane[] anchorPanes = {rootDashboard,rootResetEmployee,rootManageBranches,rootHome,rootEmployeeStatus,rootAttendanceReport,rootManageEmployees};
+        for (AnchorPane anchorPane : anchorPanes) {
+            anchorPane.setVisible(false);
+        }
     }
 
     public void btnAttendanceReportOnAction(ActionEvent actionEvent) {
@@ -55,6 +84,11 @@ public class AdminPanelController {
         Button[] buttons = {btnHome,btnManageBranches,btnEmploymentStatus,btnManageEmployees,btnDashboard,btnResetEmployees,btnTerminationRequests};
         for (Button button : buttons) {
             button.setStyle("-fx-background-color: transparent");
+        }
+        rootAttendanceReport.setVisible(true);
+        AnchorPane[] anchorPanes = {rootDashboard,rootResetEmployee,rootManageBranches,rootHome,rootEmployeeStatus,rootManageEmployees,rootTerminationRequests};
+        for (AnchorPane anchorPane : anchorPanes) {
+            anchorPane.setVisible(false);
         }
     }
 
@@ -64,6 +98,11 @@ public class AdminPanelController {
         for (Button button : buttons) {
             button.setStyle("-fx-background-color: transparent");
         }
+        rootManageBranches.setVisible(true);
+        AnchorPane[] anchorPanes = {rootDashboard,rootResetEmployee,rootManageEmployees,rootHome,rootEmployeeStatus,rootAttendanceReport,rootTerminationRequests};
+        for (AnchorPane anchorPane : anchorPanes) {
+            anchorPane.setVisible(false);
+        }
     }
 
     public void btnResetEmployeesOnAction(ActionEvent actionEvent) {
@@ -71,6 +110,11 @@ public class AdminPanelController {
         Button[] buttons = {btnHome,btnManageBranches,btnEmploymentStatus,btnManageEmployees,btnAttendanceReport,btnDashboard,btnTerminationRequests};
         for (Button button : buttons) {
             button.setStyle("-fx-background-color: transparent");
+        }
+        rootResetEmployee.setVisible(true);
+        AnchorPane[] anchorPanes = {rootDashboard,rootManageBranches,rootHome,rootEmployeeStatus,rootAttendanceReport,rootTerminationRequests};
+        for (AnchorPane anchorPane : anchorPanes) {
+            anchorPane.setVisible(false);
         }
     }
 
@@ -80,6 +124,11 @@ public class AdminPanelController {
         for (Button button : buttons) {
             button.setStyle("-fx-background-color: transparent");
         }
+        rootEmployeeStatus.setVisible(true);
+        AnchorPane[] anchorPanes = {rootDashboard,rootResetEmployee,rootManageBranches,rootHome,rootManageEmployees,rootAttendanceReport,rootTerminationRequests};
+        for (AnchorPane anchorPane : anchorPanes) {
+            anchorPane.setVisible(false);
+        }
     }
 
     public void btnLogoutOnAction(ActionEvent actionEvent) {
@@ -88,9 +137,14 @@ public class AdminPanelController {
 
     public void btnHomeOnAction(ActionEvent actionEvent) {
         btnHome.setStyle("-fx-background-color: linear-gradient(to bottom right,#ef2828,#ffffff)");
-        Button[] buttons = {btnManageBranches,btnDashboard,btnManageEmployees,btnAttendanceReport,btnResetEmployees,btnTerminationRequests};
+        Button[] buttons = {btnEmploymentStatus,btnManageBranches,btnDashboard,btnManageEmployees,btnAttendanceReport,btnResetEmployees,btnTerminationRequests};
         for (Button button : buttons) {
             button.setStyle("-fx-background-color: transparent");
+        }
+        rootHome.setVisible(true);
+        AnchorPane[] anchorPanes = {rootDashboard,rootResetEmployee,rootManageBranches,rootManageEmployees,rootEmployeeStatus,rootAttendanceReport,rootTerminationRequests};
+        for (AnchorPane anchorPane : anchorPanes) {
+            anchorPane.setVisible(false);
         }
     }
 }
